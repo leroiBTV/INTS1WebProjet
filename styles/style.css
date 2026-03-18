@@ -1,0 +1,298 @@
+@font-face{
+    font-family: Fredoka;
+    src: url('../fonts/Fredoka/static/Fredoka-Regular.ttf');
+}
+
+@font-face{
+    font-family: Handlee;
+    src: url('../fonts/Handlee/Handlee-Regular.ttf');
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-size: 1em;
+    background-color: #1F2039;
+    color:#F9F8FF;
+    min-height:100%;
+	position:relative;
+	padding-bottom:6em;
+    font-family: 'Handlee', sans-serif;
+}
+
+*{
+    margin: auto 0;
+}
+
+header, footer{
+    background-color: white;
+    padding: 20px 50px 20px 50px;
+}
+
+em{
+    color: #A5B4FC;
+    font-style: normal;
+}
+
+strong{
+    color: #A5B4FC;
+}
+
+h1{
+    color: #A5B4FC;
+    font-size: 3.5em;
+    font-family: 'Fredoka', sans-serif;
+}
+
+h2{
+    color: #F9F8FF;
+    padding: 10px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+    .photo_accueil{
+    background-color: white;
+    padding: 80px;
+    width: auto;
+}
+
+.photo_accueil h2{
+    color:#242424;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+section{
+    padding: 40px;
+    width: 60%;
+    margin: auto;
+}
+
+a{
+    color:#242424;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+nav a{
+    margin-left: 30px;
+}
+
+table{
+    color:white;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+}
+
+caption{
+    font-size: 1.3em;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+th,td{
+    padding: 15px;
+    border: 2px solid #A5B4FC;
+}
+
+.apropos{
+    font-size: 1.3em;
+    text-align: justify;
+}
+
+p.apropos{
+    padding: 15px;
+}
+
+label{
+    margin-bottom: 15px;
+}
+
+input,textarea{
+    padding: 15px;
+    border-radius: 3px;
+    border:none;
+}
+
+input[type="submit"]{
+    margin:30px auto;
+    width:200px;
+    font-weight: 700;
+    font-family: 'Handlee', sans-serif;
+}
+
+fieldset{
+    border: none;
+}
+
+.pres{
+    float:left;
+    padding: 15px;
+    width: 40%;
+    font-size: 1.3em;
+    text-align: justify;
+}
+
+.intro img{
+    float:right;
+    width: 50%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.intro blockquote{
+    clear:both;
+    padding:15px;
+    margin-bottom: 15px;
+}
+
+nav,footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.photo_accueil p{
+    width:60%;
+    margin:10px auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap:15px;
+}
+
+.formulaire h2{
+    text-align: center;
+    padding: 15px;
+}
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    margin: auto;
+}
+
+.identite{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.colonne-form{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex:1;
+}
+
+footer{
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;	
+	
+}
+
+.titre_galerie{
+	width:auto;
+    text-align: center;
+}
+
+.galerie{
+	background-color:white;
+	margin-bottom:150px;
+}
+
+.galerie h2{
+    color:#242424;
+	margin-bottom:15px;
+    font-size: 3em;
+}
+
+.grille-paysages{
+	width:80%;
+	margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    gap:15px;
+}
+
+.grille-portraits{
+		width:80%;
+	margin:auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px 400px;
+    gap:15px;
+}
+
+.grille-paysages img,
+.grille-portraits img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portrait_vertical{
+	grid-row-start:2;
+	grid-row-end:4;
+}
+
+@media screen and (max-width:996px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    nav p{
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    
+    nav p a{
+        margin-top: 15px;
+    }
+    .intro img{
+        display:none;
+    }
+    .pres{
+        float:none;
+        width: 100%;
+    }
+    
+    .identite{
+        flex-direction: column;
+    }
+    
+    .tableau{
+        display:none;
+    }
+    
+    .grille-paysages, .grille-portraits{
+  
+    grid-template-columns:1fr;
+        grid-template-rows: auto;
+    }
+    
+    
+    
+    .portrait_vertical{
+	grid-row:auto;
+    }
+}
